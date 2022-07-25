@@ -1,1 +1,6 @@
 = 2022-07-25_JS__parallax
+
+
+
+scroll effect:
+https://workshops.hackclub.com/parallax_effect/

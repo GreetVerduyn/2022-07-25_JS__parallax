@@ -3,84 +3,95 @@ body {
   background: dimgrey;
 
   .parallax {
-    position: absolute;
+    position:relative;
     top: 40px;
     left: 40px;
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 1300px;
     width: 1500px;
+    overflow: hidden;
+    perspective: 3px;
 
     /*  .character{
         position:
       }*/
 
     .sky {
-      position: absolute;
+      position: fixed;
       background-image: url("./img/11_background.png");
+      background-attachment: scroll;
+      background-position: center;
+      background-repeat: repeat-y;
+      background-size: cover;
       height: 1200px;
       width: 1500px;
       z-index: -1;
     }
 
     .floor {
-      position: absolute;
+      position: fixed;
       background-image: url("./img/01_ground.png");
+      background-attachment: scroll;
+      background-repeat: repeat-y;
       height: 1300px;
       width: 1500px;
-      z-index: 5;
+      overflow:hidden;
+      z-index: 4;
+      transform: translateX();
     }
 
 
-  .layerBack {
-    position: absolute;
-    background-image:
-    url("./img/07_huge_clouds.png");
-    height: 1200px;
-    width: 1500px;
-    z-index: 1;
+    .Back {
+      position: fixed;
+      background-image: url("./img/07_huge_clouds.png");
+      background-repeat: repeat-y;
+      height: 1200px;
+      width: 1500px;
+      z-index: 1;
+    }
+
+    .Middle1 {
+      position: fixed;
+      background-image: url("./img/09_distant_clouds1.png"),
+      url("./img/06_hill2.png");
+      background-repeat: repeat-y;
+      height: 1200px;
+      width: 1500px;
+      z-index: 0;
+    }
+
+    .Middle2 {
+      position: fixed;
+      background-image: url("./img/03_distant_trees.png"),
+      url("./img/05_hill1.png"),
+      url("./img/08_clouds.png");
+      background-repeat: repeat-y;
+      height: 1250px;
+      width: 1500px;
+      z-index: 3;
+    }
+
+    .top {
+      position: fixed;
+      background-image: url("./img/02_trees and bushes.png");
+      background-repeat: repeat-y;
+      height: 1250px;
+      width: 1500px;
+      z-index: 4;
+    }
+
+    .character {
+      position: fixed;
+      left: 100px;
+      bottom: 50px;
+      z-index:5;
+
+    }
+
+    .layer{
+
+    }
   }
-
-  .layerMiddle1 {
-    position: absolute;
-    background-image: url("./img/09_distant_clouds1.png"),
-    url("./img/06_hill2.png");
-    height: 1200px;
-    width: 1500px;
-    z-index: 0;
-  }
-
-  .layerMiddle2 {
-    position: absolute;
-    background-image: url("./img/03_distant_trees.png"),
-    url("./img/05_hill1.png"),
-    url("./img/08_clouds.png");
-    height: 1250px;
-    width: 1500px;
-    z-index: 3;
-  }
-
-  .top {
-    position: absolute;
-    background-image: url("./img/02_trees and bushes.png");
-    height: 1250px;
-    width: 1500px;
-    z-index: 4;
-  }
-
-  /*
-      .floor {
-        position: absolute;
-        background-image: url("./img/01_ground.png");
-        height: 1200px;
-        width: 1700px;
-        z-index: 5;
-      }*/
-
-}
 
 }
 
