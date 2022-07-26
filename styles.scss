@@ -3,18 +3,26 @@ body {
   background: dimgrey;
 
   #canvas1{
-    background: blue;
+    background: black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     border:5px solid wheat;
+    width: 800px;
+    height: 700px;
+    transform:translate(-50%, -50%);
+
   }
-  #playerImage{
+  #playerImage, #playerImageDead, #playerImageJump, #playerImageRun{
     display: none;
   }
 
-  #enemy{
+  #enemyImage{
+    display: none;
+  }
+
+  #parallax{
     display: none;
   }
 
@@ -46,19 +54,16 @@ body {
       display:none;
     }
 
-    .floor {
+    .Middle1 {
       position: fixed;
-      background-image: url("./img/01_ground.png");
-      background-attachment: scroll;
+      background-image: url("./img/09_distant_clouds1.png"),
+      url("./img/06_hill2.png");
       background-repeat: repeat-y;
-      height: 1300px;
+      height: 1200px;
       width: 1500px;
-      overflow:hidden;
-      z-index: 4;
-      transform: translateX();
+      z-index: 0;
       display:none;
     }
-
 
     .Back {
       position: fixed;
@@ -70,16 +75,6 @@ body {
       display:none;
     }
 
-    .Middle1 {
-      position: fixed;
-      background-image: url("./img/09_distant_clouds1.png"),
-      url("./img/06_hill2.png");
-      background-repeat: repeat-y;
-      height: 1200px;
-      width: 1500px;
-      z-index: 0;
-      display:none;
-    }
 
     .Middle2 {
       position: fixed;
@@ -95,11 +90,23 @@ body {
 
     .top {
       position: fixed;
-      background-image: url("./img/02_trees and bushes.png");
+      background-image: url("./img/03_distant_trees.png");
       background-repeat: repeat-y;
       height: 1250px;
       width: 1500px;
       z-index: 4;
+      display:none;
+    }
+    .floor {
+      position: fixed;
+      background-image: url("./img/01_ground.png");
+      background-attachment: scroll;
+      background-repeat: repeat-y;
+      height: 1300px;
+      width: 1500px;
+      overflow:hidden;
+      z-index: 4;
+      transform: translateX();
       display:none;
     }
 /*

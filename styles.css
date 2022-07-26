@@ -2,17 +2,20 @@ body {
   background: dimgrey;
 }
 body #canvas1 {
-  background: blue;
+  background: black;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 5px solid wheat;
+  width: 800px;
+  height: 700px;
+  transform: translate(-50%, -50%);
 }
-body #playerImage {
+body #playerImage, body #playerImageDead, body #playerImageJump, body #playerImageRun {
   display: none;
 }
-body #enemy {
+body #enemyImage {
   display: none;
 }
 body #parallax {
@@ -52,16 +55,13 @@ body .parallax .sky {
   z-index: -1;
   display: none;
 }
-body .parallax .floor {
+body .parallax .Middle1 {
   position: fixed;
-  background-image: url("./img/01_ground.png");
-  background-attachment: scroll;
+  background-image: url("./img/09_distant_clouds1.png"), url("./img/06_hill2.png");
   background-repeat: repeat-y;
-  height: 1300px;
+  height: 1200px;
   width: 1500px;
-  overflow: hidden;
-  z-index: 4;
-  transform: translateX();
+  z-index: 0;
   display: none;
 }
 body .parallax .Back {
@@ -71,15 +71,6 @@ body .parallax .Back {
   height: 1200px;
   width: 1500px;
   z-index: 1;
-  display: none;
-}
-body .parallax .Middle1 {
-  position: fixed;
-  background-image: url("./img/09_distant_clouds1.png"), url("./img/06_hill2.png");
-  background-repeat: repeat-y;
-  height: 1200px;
-  width: 1500px;
-  z-index: 0;
   display: none;
 }
 body .parallax .Middle2 {
@@ -93,11 +84,23 @@ body .parallax .Middle2 {
 }
 body .parallax .top {
   position: fixed;
-  background-image: url("./img/02_trees and bushes.png");
+  background-image: url("./img/03_distant_trees.png");
   background-repeat: repeat-y;
   height: 1250px;
   width: 1500px;
   z-index: 4;
+  display: none;
+}
+body .parallax .floor {
+  position: fixed;
+  background-image: url("./img/01_ground.png");
+  background-attachment: scroll;
+  background-repeat: repeat-y;
+  height: 1300px;
+  width: 1500px;
+  overflow: hidden;
+  z-index: 4;
+  transform: translateX();
   display: none;
 }
 

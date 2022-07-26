@@ -51,7 +51,24 @@ whe it's released, we move it from the array (this.keys.splice(this.keys.indexOf
 ### player:
 
 we make a class player and give it a play function, to move it around
+We prevent it from disappearing from the screen
 
+  if (this.y >= this.gameHeight -this.height) this.y = this.gameHeight -this.height
+
+if (this.x < 0) this.x = 0;
+            else if (this.x >this.gameWidth - this.width) this.x = this.gameWidth - this.width
+
+
+### background:
+
+I take 1 image to make it works
+The images moves on the page, when it is finished, it starts again.
+Because there is some time te start again,  the  imaged is copied and show after each other, so you don't see it starting again
+
+
+### enemies:
+make a constructor to crate on AND make a function to handle them (create a new one on a different amount of time (interval))
+Starting with one, and make an array for multiple enemies
 
 
 
