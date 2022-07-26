@@ -15,6 +15,9 @@ body #playerImage {
 body #enemy {
   display: none;
 }
+body #parallax {
+  display: none;
+}
 body .parallax {
   position: relative;
   top: 40px;
