@@ -1,6 +1,40 @@
 = 2022-07-25_JS__parallax
 
+a new challenge...
+
+They say to chill out for a bit.
+
+So not for me.
+
+It takes me almost a whole day to put all the images neatly over each other.
+position, layers,...
+add figure in the right place.
+Now looking for ome scroll effects
+https://workshops.hackclub.com/parallax_effect
 
 
-scroll effect:
-https://workshops.hackclub.com/parallax_effect/
+
+day 2 we start with this video: https://www.youtube.com/watch?v=7JtLHJbm0kA
+
+e start an anonymous function in Javascript, that waits fo each element to be loaded before we start the game.
+Inhere all the code comes.
+ - classes for player, background, enemy and input handlers
+- functions to handle the enemy, to display the status of the game, and one to animate the background.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
