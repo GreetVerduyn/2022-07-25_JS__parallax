@@ -21,8 +21,36 @@ Inhere all the code comes.
  - classes for player, background, enemy and input handlers
 - functions to handle the enemy, to display the status of the game, and one to animate the background.
 
+### Class Inputandler:
 
+We make a constructor to keep every pressed button in mind (the arrow keys for start)
+if the key is pressed, and not yet in the array of pressed keys (this.keys.indexOf(e.key) === -1), we add i to the array,
+whe it's released, we move it from the array (this.keys.splice(this.keys.indexOf(e.key), 1);)
 
+   class InputHandler {
+        constructor(){
+            this.keys = [];
+            window.addEventListener('keydown',e => {
+                if ((e.key === 'ArrowDown' ||
+                     e.key === 'ArrowUp'||
+                     e.key === 'ArrowLeft'||
+                     e.key === 'ArrowRight')
+                    && this.keys.indexOf(e.key) === -1){
+                    this.keys.push(e.key);
+                }
+            });
+            window.addEventListener('keyup',e => {
+                if (e.key === 'ArrowDown' ||
+                     e.key === 'ArrowUp'||
+                     e.key === 'ArrowLeft'||
+                     e.key === 'ArrowRight'){
+                    this.keys.splice(this.keys.indexOf(e.key), 1);
+                }
+            });
+        }
+### player:
+
+we make a class player and give it a play function, to move it around
 
 
 
