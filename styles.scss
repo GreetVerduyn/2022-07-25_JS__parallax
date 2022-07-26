@@ -2,15 +2,32 @@
 body {
   background: dimgrey;
 
+  #canvas1{
+    background: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border:5px solid wheat;
+  }
+  #playerImage{
+    display: none;
+  }
+
+  #enemy{
+    display: none;
+  }
+
   .parallax {
     position:relative;
     top: 40px;
     left: 40px;
-
     height: 1300px;
     width: 1500px;
     overflow: hidden;
     perspective: 3px;
+    display: none;
+
 
     /*  .character{
         position:
@@ -26,6 +43,7 @@ body {
       height: 1200px;
       width: 1500px;
       z-index: -1;
+      display:none;
     }
 
     .floor {
@@ -38,6 +56,7 @@ body {
       overflow:hidden;
       z-index: 4;
       transform: translateX();
+      display:none;
     }
 
 
@@ -48,6 +67,7 @@ body {
       height: 1200px;
       width: 1500px;
       z-index: 1;
+      display:none;
     }
 
     .Middle1 {
@@ -58,6 +78,7 @@ body {
       height: 1200px;
       width: 1500px;
       z-index: 0;
+      display:none;
     }
 
     .Middle2 {
@@ -69,6 +90,7 @@ body {
       height: 1250px;
       width: 1500px;
       z-index: 3;
+      display:none;
     }
 
     .top {
@@ -78,15 +100,17 @@ body {
       height: 1250px;
       width: 1500px;
       z-index: 4;
+      display:none;
     }
-
+/*
     .character {
       position: fixed;
       left: 100px;
       bottom: 50px;
       z-index:5;
+      background: blue;
 
-    }
+    }*/
 
     .layer{
 
